@@ -1,0 +1,227 @@
+/* variables */
+:root {
+  --main-color: #ffd700;
+  --secondary-color: #eee;
+  --sea-blue: #44a7c4;
+  --break-brown: #77603f;
+  --green: #005d00;
+  --section-padding: 30px;
+}
+/* global variables  */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "PT Serif", serif;
+  background-image: url(./images/ec19d733308256ca8e99ccf1762c044b.jpg);
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  width: 100%;
+}
+body .all {
+  position: relative;
+}
+body::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #0000006e;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* start */
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .logo {
+  background-image: url(./images/97-976419_rolex-logo-png-file-rolex-crown-logo-gold.png);
+  height: 100px;
+  width: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+nav ul li {
+  text-decoration: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: var(--green);
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  color: var(--main-color);
+  /* font-size: 1.1em; */
+}
+/* section  */
+
+.section .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: var(--section-padding);
+  flex-wrap: wrap;
+}
+.section .left {
+  padding: var(--section-padding);
+}
+.section .left h1 {
+  font-size: 2.5em;
+  color: var(--green);
+}
+.section .left hr {
+  width: 50%;
+  background-color: var(--main-color);
+  height: 3px;
+}
+.section .left p {
+  line-height: 1.8;
+  font-size: 1.5em;
+  color: var(--green);
+}
+.section .left i {
+  font-size: 2em;
+  margin: 50px 0 20px;
+  color: var(--main-color);
+}
+
+.section .left button {
+  margin: 20px 0;
+  padding: 5px 10px;
+  font-size: 20px;
+  border: none;
+  border-top: 1px solid var(--main-color);
+  color: var(--green);
+}
+.section .left button:hover {
+  background-color: var(--main-color);
+}
+
+.section .right {
+  position: relative;
+}
+.section .right .image {
+  background-image: url(./images/179-1792002_ghost-ii-datejust-green-watch-rolex-watches-clipart.png);
+  height: 400px;
+  width: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+@media (max-width: 767px) {
+  .section .right .image {
+    transform: translate(20%);
+  }
+}
+
+/* scroll  */
+.scroll {
+  padding: var(--section-padding);
+}
+.scroll ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  position: relative;
+}
+
+.scroll ul li {
+  margin: 0 30px;
+}
+
+.scroll li img {
+  position: absolute;
+  margin-top: -100px;
+  cursor: pointer;
+}
+.scroll li img:hover {
+  animation: anim 1s ease-out forwards;
+}
+@keyframes anim {
+  0% {
+  }
+  100% {
+    transform: translate(20px) scale(1.5);
+    height: 200px;
+    z-index: 99;
+  }
+}
+@media (max-width: 767px) {
+  .scroll ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin-top: 150px;
+    margin-bottom: 50px;
+  }
+  .scroll li img {
+    position: relative;
+  }
+  .scroll ul li {
+    margin: 0;
+  }
+}
+
+.scroll li:first-child img {
+}
+.scroll li:nth-child(2) img {
+}
+.scroll li:nth-child(3) img {
+}
+.scroll li:nth-child(4) img {
+}
+.img-s {
+  height: 200px;
+  transition: 0.5s;
+}
+/* social  */
+.social {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+}
+.social i {
+  color: var(--secondary-color);
+  font-size: 1.5em;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.social i:hover {
+  color: var(--green);
+}
